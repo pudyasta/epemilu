@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout6"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@drawable/top_background"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                   <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout6"
+                        app:layout_constraintEnd_toStartOf="@+id/textView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/constraintLayout6">
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/arrow"
+                            android:clickable="true"
+                            android:onClick="switchActivityToMain"/>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="Lokasi TPS"
+                        android:textColor="#ffffff"
+                        android:textSize="25sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                >
+                <TextView
+                    android:id="@+id/TPSterdekat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TPS Terdekat"
+                    android:layout_marginVertical="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginHorizontal="50dp"
+
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="53dp"
+                    tools:layout_editor_absoluteY="110dp"
+                    tools:ignore="MissingConstraints" />
+
+                <ImageView
+                    android:id="@+id/kolom1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/kolom1"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="129dp"
+                    tools:ignore="MissingConstraints" android:layout_gravity="center_horizontal"/>
+
+                <ImageView
+                    android:id="@+id/kolom2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/kolom2"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="275dp" android:layout_gravity="center_horizontal"/>
+
+                <ImageView
+                    android:id="@+id/kolom3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/kolom3"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="421dp" android:layout_gravity="center_horizontal" />
+
+                <ImageView
+                    android:id="@+id/kolom4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/kolom4"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="573dp" android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
